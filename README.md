@@ -223,3 +223,14 @@ Requirement already satisfied: fortls in /home/cliff/.local/lib/python3.10/site-
 Requirement already satisfied: packaging in /home/cliff/.local/lib/python3.10/site-packages (from fortls) (22.0)
 Requirement already satisfied: json5 in /home/cliff/.local/lib/python3.10/site-packages (from fortls) (0.9.10)
 ```
+
+### findent
+
+After adding the PATH directory from the previous step, other tools can be added automatically via the Modern Fortran plugin, e.g. the `findent`:
+
+```console
+cliff@DESKTOP-D131KNR:~/mycode/fortran/fort1$ pip3 install findent
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: findent in /home/cliff/.local/lib/python3.10/site-packages (4.2.3)
+```
+
