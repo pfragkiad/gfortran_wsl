@@ -212,3 +212,14 @@ Installing collected packages: json5, packaging, fortls
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 Successfully installed fortls-2.13.0 json5-0.9.10 packaging-22.0
 ```
+### Add fortls directory to PATH
+
+```console
+cliff@DESKTOP-D131KNR:~/mycode/fortran/fort1$ export PATH="/home/cliff/.local/bin:$PATH"
+cliff@DESKTOP-D131KNR:~/mycode/fortran/fort1$ source ~/.bashrc
+cliff@DESKTOP-D131KNR:~/mycode/fortran/fort1$ pip3 install fortls
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: fortls in /home/cliff/.local/lib/python3.10/site-packages (2.13.0)
+Requirement already satisfied: packaging in /home/cliff/.local/lib/python3.10/site-packages (from fortls) (22.0)
+Requirement already satisfied: json5 in /home/cliff/.local/lib/python3.10/site-packages (from fortls) (0.9.10)
+```
