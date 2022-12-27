@@ -3,11 +3,11 @@
 
 1. Be sure that the correct extensions are loaded:
 
-*** Locally
+### Locally
 
 ![local extensions](local_extensions.png)
 
-*** In Ubuntu (WSL)
+### In Ubuntu (WSL)
 
 ![extensions](extensions.png)
 
