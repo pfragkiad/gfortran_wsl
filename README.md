@@ -234,3 +234,52 @@ Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: findent in /home/cliff/.local/lib/python3.10/site-packages (4.2.3)
 ```
 
+### Attempt to "install" fpm
+
+We download the fpm binary and rename it according to instructions. The download target path is already in the PATH (see the steps before):
+
+```console
+
+ wget fpm https://github.com/fortran-lang/fpm/releases/download/v0.7.0/fpm-0.7.0-linux-x86_64
+--2022-12-27 11:22:15--  http://fpm/
+Resolving fpm (fpm)... failed: Name or service not known.
+wget: unable to resolve host address ‘fpm’
+--2022-12-27 11:22:16--  https://github.com/fortran-lang/fpm/releases/download/v0.7.0/fpm-0.7.0-linux-x86_64
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/233763778/dd33bcab-d222-44ba-9c13-9a36d7380e9c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221227%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221227T192215Z&X-Amz-Expires=300&X-Amz-Signature=ce135775845c7ac30e79879c7926b96f6ee23fbe13728d413c25224423a3c7c2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=233763778&response-content-disposition=attachment%3B%20filename%3Dfpm-0.7.0-linux-x86_64&response-content-type=application%2Foctet-stream [following]
+--2022-12-27 11:22:17--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/233763778/dd33bcab-d222-44ba-9c13-9a36d7380e9c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221227%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221227T192215Z&X-Amz-Expires=300&X-Amz-Signature=ce135775845c7ac30e79879cliff@DESKTOP-D131KNR:~/.local$
+ntent-disposition=attachment%3B%20filename%3Dfpm-0.7.0-linux-x86_64&response-content-type=application%2Foctet-streamResolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4091456 (3.9M) [application/octet-stream]
+Saving to: ‘fpm-0.7.0-linux-x86_64’
+
+fpm-0.7.0-linux-x86_64       100%[==============================================>]   3.90M  6.26MB/s    in 0.6s
+
+2022-12-27 11:22:17 (6.26 MB/s) - ‘fpm-0.7.0-linux-x86_64’ saved [4091456/4091456]
+
+FINISHED --2022-12-27 11:22:17--
+Total wall clock time: 2.2s
+Downloaded: 1 files, 3.9M in 0.6s (6.26 MB/s)
+cliff@DESKTOP-D131KNR:~/.local/bin$ ls
+findent  fortls  fpm-0.7.0-linux-x86_64  pyjson5  wfindent
+cliff@DESKTOP-D131KNR:~/.local/bin$ mv fpm-0.7.0-linux-x86_64 fpm
+cliff@DESKTOP-D131KNR:~/.local/bin$ ls
+findent  fortls  fpm  pyjson5  wfindent
+cliff@DESKTOP-D131KNR:~/.local/bin$ chmox +x fpm
+Command 'chmox' not found, did you mean:
+  command 'chmod' from deb coreutils (8.32-4.1ubuntu1)
+Try: sudo apt install <deb name>
+cliff@DESKTOP-D131KNR:~/.local/bin$ chmod+x fpm
+chmod+x: command not found
+cliff@DESKTOP-D131KNR:~/.local$
+cliff@DESKTOP-D131KNR:~/.local/bin$ ls
+findent  fortls  fpm  pyjson5  wfindent
+cliff@DESKTOP-D131KNR:~/.local/bin$ nano fpm.txt
+cliff@DESKTOP-D131KNR:~/.local/bin$ cat fpm.txt
+Installed from:
+https://github.com/fortran-lang/fpm/releases/download/v0.7.0/fpm-0.7.0-linux-x86_64
+
+```
