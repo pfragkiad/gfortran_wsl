@@ -19,7 +19,7 @@ sudo apt-get install gfortran
         "type": "shell",
         "label": "gfortran build active file",
         "command": "/usr/bin/gfortran",
-        "args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}.exe"],
+        "args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}.out"],
         "options": {
           "cwd": "/usr/bin"
         },
@@ -30,5 +30,34 @@ sudo apt-get install gfortran
         }
       }
     ]
+}
+```
+3. The following block should be included within the `launch.json`:
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "gfortran build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "gfortran build active file",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
 }
 ```
