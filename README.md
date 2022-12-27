@@ -61,3 +61,23 @@ sudo apt-get install gfortran
   ]
 }
 ```
+
+Write a sample program:
+```fortran
+program test
+    implicit none
+
+    integer(4) :: i = 50
+
+    print *,"KEFTEDES!"
+
+    print *,calc(i)
+    
+
+contains
+    pure integer(4) function calc(x)
+        integer(4),intent(in)::x
+        calc = 10*x
+    end function
+end program
+```
