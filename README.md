@@ -1,7 +1,6 @@
 # gfortran_wsl
 
-```
-!bash
+```bash
 
 sudo apt-get update
 sudo apt-get install build-essential gdb
