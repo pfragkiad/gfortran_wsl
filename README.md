@@ -89,3 +89,26 @@ contains
     end function
 end program
 ```
+
+## Notes
+
+### Install fortls
+
+```console
+cliff@DESKTOP-D131KNR:~/mycode/fortran/fort1$ pip3 install fortls
+Defaulting to user installation because normal site-packages is not writeable
+Collecting fortls
+  Downloading fortls-2.13.0-py3-none-any.whl (92 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.5/92.5 KB 877.0 kB/s eta 0:00:00
+Collecting packaging
+  Downloading packaging-22.0-py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.6/42.6 KB 4.3 MB/s eta 0:00:00
+Collecting json5
+  Downloading json5-0.9.10-py2.py3-none-any.whl (19 kB)
+Installing collected packages: json5, packaging, fortls
+  WARNING: The script pyjson5 is installed in '/home/cliff/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script fortls is installed in '/home/cliff/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed fortls-2.13.0 json5-0.9.10 packaging-22.0
+```
