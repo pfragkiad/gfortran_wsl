@@ -1,7 +1,9 @@
 # gfortran_wsl
 
 
-1. Be sure that the correct extensions are loaded:
+1. Be sure that the correct extensions are loaded (locally and within Ubuntu):
+
+![local extensions](local_extensions.png)
 
 ![extensions](extensions.png)
 
