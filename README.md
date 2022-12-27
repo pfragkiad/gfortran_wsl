@@ -2,6 +2,7 @@
 
 
 1. Be sure that the correct extensions are loaded:
+
 ![extensions](extensions.png)
 
 2. First be sure that the correct apps are installed.
