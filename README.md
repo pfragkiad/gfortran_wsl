@@ -1,7 +1,10 @@
 # gfortran_wsl
 
 
-1. First be sure that the correct apps are installed.
+1. Be sure that the correct extensions are loaded:
+![extensions](extensions.png)
+
+2. First be sure that the correct apps are installed.
 ```bash
 
 sudo apt-get update
@@ -10,7 +13,7 @@ sudo apt-get install gfortran
 
 ```
 
-2. Then include the following blocks for the `tasks.json`:
+3. Then include the following blocks for the `tasks.json`:
 ```json
 {
     "version": "2.0.0",
@@ -32,7 +35,7 @@ sudo apt-get install gfortran
     ]
 }
 ```
-3. The following block should be included within the `launch.json`:
+4. The following block should be included within the `launch.json`:
 ```json
 {
   "version": "0.2.0",
