@@ -62,7 +62,7 @@ sudo apt-get install gfortran
 }
 ```
 
-Write a sample program:
+Write a sample program, for example:
 ```fortran
 program test
     implicit none
