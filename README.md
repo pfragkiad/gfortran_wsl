@@ -13,11 +13,9 @@
 
 2. First be sure that the correct apps are installed.
 ```bash
-
 sudo apt-get update
 sudo apt-get install build-essential gdb
 sudo apt-get install gfortran
-
 ```
 
 3. Then include the following blocks for the `tasks.json`:
